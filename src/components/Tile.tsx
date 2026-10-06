@@ -43,7 +43,9 @@ const Tile = ({tile,colIdx,rowIdx}:TilePropsType) => {
   }
 
   const build = () => {
-    canBuild() ? setBuilding(selectedBuilding) : alert("Nem lehet építeni!")
+    if(!canBuild()){alert("Nem lehet építeni te hüje"); return}
+    
+    setBuilding(selectedBuilding)
   }
 
   const hoverTile = (e: React.MouseEvent) => {

@@ -1,5 +1,6 @@
 import { create } from "zustand";
 import type { ResourceType } from "../types/Map";
+import type { BuildingDataType } from "../types/Buildings";
 
 type ResourceStoreType = {
     gold: number,
@@ -41,3 +42,8 @@ export const useResourceStore = create<ResourceStoreType>((set)=>({
         return false;
     }
 }))
+
+export function buildABuilding(building: BuildingDataType){
+
+
+}
